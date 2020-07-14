@@ -1,7 +1,19 @@
-h1{
-    text-align: center;
-    color: white;
-    background-color: rgb(100, 97, 97);
-    padding: 15px;
+.nav-wrapper{
+    background-color: rgb(92, 87, 87);
+}
+
+.city{
+    margin-left: 10px;
+    margin-top: 20px;
+    margin-bottom: 0px;
     font-weight: bold;
+    font-size: 20px;
+}
+
+.row {
+    margin-left: 40px;
+}
+
+#search-button {
+    margin-top: 22px;
 }
