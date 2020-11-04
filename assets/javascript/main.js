@@ -2,13 +2,10 @@ $(document).ready(function(){
 
 var apiKey = "5ea2b6678193a631fc563bd0b047bbba";
 
-
-
 $("#search-button").click(function(event){
-    console.log(event.target);
     callWeatherApi();
     callFiveDayApi();
-})
+});
 
 var callWeatherApi = function(cityInput){
     var cityInput = $("#city-name").val();
@@ -17,7 +14,6 @@ var callWeatherApi = function(cityInput){
         url: currentWeather,
         method: "GET"
     }).then(function(response){
-        console.log(response);
         var weatherIcon = response.weather[0].icon;
         $("#cityName").addClass("card-body").html(response.name + " (" + new Date().toLocaleDateString() + ")");
         $("#mainIcon").addClass("card-body card-icon").html("<img src='" + "http://openweathermap.org/img/wn/" + weatherIcon + "@2x.png" + "'>")
@@ -34,7 +30,6 @@ var callFiveDayApi = function(cityInput){
         url: fivDayWeather,
         method: "GET"
     }).then(function(results){
-        console.log(results);
         // openweatherapi has 40 objects in array for 5 day forecast
         // this for loop is set up so that it skips over the repeated date 
         // shows the next 5 days instead of same day 5 times
@@ -62,10 +57,7 @@ var callFiveDayApi = function(cityInput){
             createCardContent.append($("<p>").addClass("humidity").html("Humidity: " + humidity + "%"));
             createCardContent.append($("<p>").addClass("windSpeed").html("Wind Speed: " + windSpeed + " MPH "));
             createCard.append(createCardContent);
-            containerId.append(createCard);
-            
-            
-            
+            containerId.append(createCard);            
         }
     })
 }
