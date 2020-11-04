@@ -1,4 +1,4 @@
-# weather-app
+# Weather-App [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Links
 - Deployed Webpage: https://ktlnn.github.io/weather-app/
@@ -7,7 +7,7 @@
     - 5 Day Forecast: https://api.openweathermap.org/data/2.5/forecast?q={city name}&appid={API key}
     
 ## Table of Contents
-[User Story](## User Story)
+*[User Story](#userstory)
 
 ## User Story
 ``` 
@@ -21,9 +21,6 @@ Traveling can be exhausting and having a weather app handy will lessen the worri
 
 ## How Weather App Works
 Weather App uses an OpenWeatherMap API key that allows for the application to render the current weather and a 5 day forecast. The cards are created dynamically and appear on search. The 5 day weather forecast function has a unique for loop that loops through the 5 day forecast object provided by the API key and create a card for each day. Adding a class to the dynamically created cards allows for the styling to appear once the search is completed. Each weather card displays the searched city's name, the date, temperature, humidity, and wind-speed.
-
-## License
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Screenshots
 ![current-day-weather](/assets/images/current-weather.png)
