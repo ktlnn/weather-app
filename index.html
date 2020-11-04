@@ -8,6 +8,7 @@
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="assets/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
     <!-- Compiled and minified JavaScript -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
@@ -24,17 +25,43 @@
         </nav>
     </header>
     <main>
-        <div class="row">
+        <div class="row city-search">
             <p class="city">Search for a City</p>
-            <div class="input-field col s6">
-                <input id="input_text" type="text" data-length="10">
-                <label id="city-name" for="input_text">City Name</label>
+            <div class="input-field col offset-s3 s6">
+                <input id="city-name" type="text" data-length="10">
+                <label for="input_text">City Name</label>
             </div>
-            <div class="col s6">
+            <div class="col offset-s3 s6">
                 <a id="search-button" class="waves-effect waves-light btn">Search</a>
             </div>
         </div>
+        <!-- main weather card -->
+        <div class="row current-weather">
+            <div class="col offset-s4">
+                <div class="card">
+                    <div>
+                        <h1 id="cityName"></h1>
+                        <div id="mainIcon"></div>
+                        <div id="temperature"></div>
+                        <div id="humidity"></div>
+                        <div id="wind-speed"></div>
+                        <div id="uv-index"></div>
+                    </div>
+                </div>
+            </div>
+        </div>  
+
+        <!-- 5 day forecast -->
+        <div class="forecast">
+                    
+        </div>
+          
+
     </main>
+
+    <footer>
+        <p className="footer">Handcrafted by me <span>&#169;</span> Katelynn 2020</p>
+    </footer>
 </body>
 
 </html>
