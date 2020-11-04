@@ -8,6 +8,9 @@
     
 ## Table of Contents
 - [User Story](#userstory)
+- [Business Context](#businesscontext)
+- [How Weather App Works](#howweatherappworks)
+- [Screenshots](#screenshots)
 - [Questions](#questions)
 
 ## User Story
