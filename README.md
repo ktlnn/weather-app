@@ -7,9 +7,9 @@
     - 5 Day Forecast: https://api.openweathermap.org/data/2.5/forecast?q={city name}&appid={API key}
     
 ## Table of Contents
-- [User Story](#userstory)
-- [Business Context](#businesscontext)
-- [How Weather App Works](#howweatherappworks)
+- [User Story](#user-story)
+- [Business Context](#business-context)
+- [How Weather App Works](#how-weather-app-works)
 - [Screenshots](#screenshots)
 - [Questions](#questions)
 
