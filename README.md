@@ -5,6 +5,9 @@
 - API used: https://openweathermap.org/
     - Current Weather: https://api.openweathermap.org/data/2.5/weather?q={city name}&appid={API key}
     - 5 Day Forecast: https://api.openweathermap.org/data/2.5/forecast?q={city name}&appid={API key}
+    
+## Table of Contents
+[User Story](## User Story)
 
 ## User Story
 ``` 
