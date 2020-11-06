@@ -11,6 +11,7 @@
 - [Business Context](#business-context)
 - [How Weather App Works](#how-weather-app-works)
 - [Screenshots](#screenshots)
+- [Demo](#demo)
 - [Questions](#questions)
 
 ## User Story
@@ -29,6 +30,9 @@ Weather App uses an OpenWeatherMap API key that allows for the application to re
 ## Screenshots
 ![current-day-weather](/assets/images/current-weather.png)
 ![five-day-forecast-screenshot](/assets/images/forecast.png)
+
+## Demo 
+![weather-app-demp](/assets/images/weather-app-demo.gif)
 
 ## Questions
 If you have any questions about Weather App, feel free to contact me at: ktlnn.nguyen@gmail.com
