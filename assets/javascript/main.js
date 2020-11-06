@@ -4,12 +4,16 @@ var apiKey = "5ea2b6678193a631fc563bd0b047bbba";
 
 $("#search-button").click(function(event){
     callWeatherApi();
+    $(".forecast").empty();
     callFiveDayApi();
+    
+
 });
 
 var callWeatherApi = function(cityInput){
     var cityInput = $("#city-name").val();
     var currentWeather = "https://api.openweathermap.org/data/2.5/weather?units=imperial&q=" + cityInput + "&appid=" + apiKey;
+    
     $.ajax({
         url: currentWeather,
         method: "GET"
@@ -20,6 +24,16 @@ var callWeatherApi = function(cityInput){
         $("#temperature").addClass("card-body card-text").html("Temperature: " + response.main.temp + " &#8457;");
         $("#humidity").addClass("card-body card-text").text("Humidity: " + response.main.humidity + "%");
         $("#wind-speed").addClass("card-body card-text").text("Wind Speed: " + response.wind.speed + " MPH ");
+
+        var lat = response.coord.lat;
+        var lon = response.coord.lon;
+        var uvIndex = "http://api.openweathermap.org/data/2.5/uvi?lat=" + lat + "&lon=" + lon + "&appid=" + apiKey;
+        return $.ajax({
+            url: uvIndex,
+            method: "GET"
+        })
+    }).then(function(results) {
+        $("#uv-index").addClass("card-body card-text").text("UV Index: " + results.value);
     });
 }
 
@@ -35,7 +49,8 @@ var callFiveDayApi = function(cityInput){
         // shows the next 5 days instead of same day 5 times
         for( var i = 6; i < results.list.length; i += 8) {
             
-            let createCardContainer = $("<div>").addClass("card-container").attr("id", "card" + i);;
+            let createCardContainer = $("<div>").addClass("card-container").attr("id", "card" + i);
+            
             $(".forecast").append(createCardContainer);
             var containerId = $("#card" + i);
             let createCard = $("<div>").addClass("create-card");
@@ -57,10 +72,13 @@ var callFiveDayApi = function(cityInput){
             createCardContent.append($("<p>").addClass("humidity").html("Humidity: " + humidity + "%"));
             createCardContent.append($("<p>").addClass("windSpeed").html("Wind Speed: " + windSpeed + " MPH "));
             createCard.append(createCardContent);
-            containerId.append(createCard);            
+            containerId.append(createCard); 
+            
         }
     })
 }
+
+
 
 });
 
